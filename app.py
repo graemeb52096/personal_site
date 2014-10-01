@@ -1,4 +1,12 @@
-import web
+#!/usr/bin/env python
+import web, os, sys
+
+root = os.path.join(os.path.dirname(__file__)+"/")
+sys.path.insert(0, root)
+static = os.path.join(os.path.dirname(__file__)+"/static/")
+templates = os.path.join(os.path.dirname(__file__)+"/templates/")
+sys.path.insert(1, templates)
+os.chdir(root)
 
 urls = (
     '/', 'index',
@@ -6,13 +14,13 @@ urls = (
     '/about', 'about',
     '/photography', 'photography',
     '/resume', 'resume',
-    '/static/images/photos/.*' 'images'
+    '/var/www/git/personal_site/static/images/photos/.*', 'images'
 )
 
 application = web.application(urls, globals())
 web.config.debug = True
 
-render = web.template.render('templates/', base='base')
+render = web.template.render(templates, base='base')
 
 class index:
     def GET(self):
@@ -27,7 +35,7 @@ class photography:
     def GET(self):
         import os
 
-        total_con=os.listdir('static/images/photos')
+        total_con=os.listdir('/var/www/git/personal_site/static/images/photos')
 
         files=[]
 
@@ -39,9 +47,7 @@ class photography:
 class resume:
     def GET(self):
         return render.resume()
-        
-if __name__ == "__main__": 
-    app = web.application(urls, globals())
-    app.run() 
 
-wsgiapp = app.wsgifunc()
+
+if __name__ == '__main__':
+	web.application(urls, globals()).run()
