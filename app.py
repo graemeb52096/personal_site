@@ -9,6 +9,9 @@ urls = (
     '/static/images/photos/.*' 'images'
 )
 
+application = web.application(urls, globals())
+web.config.debug = True
+
 render = web.template.render('templates/', base='base')
 
 class index:
