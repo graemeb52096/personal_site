@@ -14,7 +14,7 @@ urls = (
     '/about', 'about',
     '/photography', 'photography',
     '/resume', 'resume',
-    '/var/www/git/personal_site/static/images/photos/.*', 'images'
+    '%s/static/images/photos/.*'%(root), 'images'
 )
 
 application = web.application(urls, globals())
@@ -30,12 +30,13 @@ class blog:
         return render.blog()
 class about:
     def GET(self):
-        return render.about()
+        bio = open('%s/bio/bio.txt'%(root), 'r')
+        return render.about(bio)
 class photography:
     def GET(self):
         import os
 
-        total_con=os.listdir('/var/www/git/personal_site/static/images/photos')
+        total_con=os.listdir('%s/static/images/photos'%(root))
 
         files=[]
 
