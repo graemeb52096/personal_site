@@ -33,11 +33,8 @@ ul
 }
 #header
 {
-	width: 100%;
 	height: 7.5%;
-	display: inline-block;
 	background-color: white;
-	position: fixed;
 	text-align: center;
 	padding-top: 2.5%;	
 	margin-top: -1%;
@@ -48,6 +45,9 @@ ul
 	font-weight: bold;
 	opacity: 0.97;
 	box-shadow: 0 0 20px 2.5px #DDD;
+    width:100%;
+	position:fixed;
+	top:0px;
 }
 #about
 {
