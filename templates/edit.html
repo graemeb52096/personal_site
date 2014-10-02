@@ -1,0 +1,17 @@
+$def with (post, form)
+<div id ='site_body'>
+	<h1>Edit "$form.d.title"</h1>
+
+	<form action="" method="post">
+		$:form.render()
+	</form>
+
+
+	<h2>Delete post</h2>
+		<form action="/delete/$post.id" method="post">
+			<label>Super Secret Password: </label><input type="password" name="password">
+			<br>
+			<br>
+    		<input type="submit" value="Delete post"/>
+		</form>
+</div>

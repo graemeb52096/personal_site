@@ -1,0 +1,21 @@
+$def with (posts)
+
+<div id='site_body'>
+	<h1>Blog posts</h1>
+	<div id="posts">
+		$for post in posts:
+   			<div id = 'blog_post'>
+				<h2>$post.title</h2>
+				<span id='date'>Date: $((post.posted_on).split(' ')[0])</span>
+				<div id='post_body'>
+					<p>
+						$post.content
+					</p>
+				</div>
+				<div id='post_links'>
+       				<a id = 'post_link' href="/view/$post.id" id='read_more'>Read more</a> 
+       				<a id = 'post_link' href="/edit/$post.id">Edit</a>
+				</div>	
+			</div>
+	</div>
+</div>
