@@ -25,6 +25,12 @@ ul
 {
 	width: 30%;
 }
+#content
+{
+	padding-top: 7.5%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
 #header
 {
 	width: 100%;
@@ -83,13 +89,14 @@ ul
 }
 #resume
 {
-	padding-top: 7.5%;
-	margin-left: 5%;
-	margin-right: 5%;
+	padding-top: 5%;
 	margin-bottom: 2%;
+	padding-left: 3.5%;
+	padding-right: 3.5%;
+	padding-bottom: 2%;
 	text-align: left;
-	display: block;
 	box-shadow: 0 0 20px 2.5px #DDD;
+	background-color: white;
 }
 #about
 {
