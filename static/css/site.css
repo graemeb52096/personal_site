@@ -73,19 +73,14 @@ ul
 }
 .images
 {
-	margin-top: 7.5%;
-	margin-bottom: 2.5%;
+	text-align: center;
+	padding-top: 5%;
 }
 #photo
 {
-	height: 90%;
+	height: 80%;
 	overflow: hidden;
 	margin-bottom: 5%;
-}
-#images
-{
-	display: block;
-	text-align: center;
 }
 #resume
 {
