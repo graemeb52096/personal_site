@@ -77,6 +77,18 @@ a:hover
 	text-align: left;
 	display: block;
 }
+#about
+{
+	padding-top: 7.5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: left;
+}
+#about_me
+{
+	width: 30%;
+	float: left;
+}
 #center
 {
 	text-align: center;
