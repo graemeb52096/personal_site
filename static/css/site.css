@@ -153,10 +153,15 @@ ul
 {
 	text-align: center;
 	padding-top: 5%;
+	padding-bottom: auto;
+	width: 59vw;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
 }
 #photo
 {
-	height: 80%;
+	height: auto%;
 	overflow: hidden;
 	margin-bottom: 5%;
 }

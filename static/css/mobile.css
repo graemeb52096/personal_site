@@ -89,4 +89,11 @@ h2
 	text-align:center;
 	position: relative;
 }
+#post_viewer
+{
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+}
 
