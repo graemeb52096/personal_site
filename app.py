@@ -111,7 +111,7 @@ class Edit:
         if not form.validates():
             return render.edit(post, form)
         if str(form.d.password) == '123':
-            model.update_post(int(id), form.d.title, form.d.content)
+            model.update_post(int(id), form.d.title, form.d.content, form.d.link, form.d.link_name)
             raise web.seeother('/')
         else:
             return render.edit(post, form)

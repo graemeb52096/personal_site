@@ -1,8 +1,17 @@
+a{
+	margin-right:1%;
+	margin-left:1%;
+}
+#mobile_header
+{
+	font-size:190%;
+}
 #header
 {
 	position: relative;
-	height: 5%;
-	padding-top: 5%;
+	height: auto;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
 }
 #site_body
 {
@@ -16,18 +25,25 @@
 }
 #blog_post
 {
-	height: 40%;
-	width: 90%;
+	height: auto;
+	width: 95%;
 	padding: 2.5%;
 	margin-top: 5%;
 	margin-right: auto;
 	margin-left: auto;
+	font-size: 200%;
+}
+#post_body
+{
+	height: auto;
+	margin-bottom: auto;
 }
 #about_me
 {
 	margin-right: auto;
 	margin-left: auto;
 	width: 90%;
+	font-size: 200%;
 }
 .images
 {
@@ -51,5 +67,17 @@ img
 }
 h1
 {
-	font-size: 500%;
+	font-size: 400%;
+}
+h2
+{
+	font-size: auto;
+}
+#post_links
+{
+	position: relative;
+}
+#linked_in
+{
+	display: inline;
 }

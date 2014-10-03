@@ -17,6 +17,6 @@ def new_post(title, text, link, link_name):
 def del_post(id):
     db.delete('entries', where="id=$id", vars=locals())
 
-def update_post(id, title, text):
+def update_post(id, title, text, link, link_name):
     db.update('entries', where="id=$id", vars=locals(),
-        title=title, content=text)
+        title=title, content=text, link=link, link_name=link_name)
