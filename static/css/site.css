@@ -234,6 +234,17 @@ line-height: 1.25em;
 	margin-right: 5%;
 	position: relative;
 }
+#post_viewer
+{
+	background-color: white;
+	box-shadow: 0 0 10px 2.5px #DDD;
+	height: auto;
+	width: 50%;
+	padding: 2.5%;
+	margin-top: 2.5%;
+	margin-right: 5%;
+	position: relative;
+}
 #posts
 {
 	padding-top: 2.5%;
