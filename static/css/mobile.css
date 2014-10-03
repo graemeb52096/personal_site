@@ -99,5 +99,8 @@ h2
 #hire_me
 {
 	visibility: hidden;
+	width: 0%;
+	height: 0%;
+	overflow: hidden;
 }
 
