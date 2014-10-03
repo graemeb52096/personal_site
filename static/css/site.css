@@ -182,10 +182,23 @@ ul
 }
 #about_me
 {
-	width: 30%;
+	width: 42.5%;
 	box-shadow: 0 0 10px 2.5px #DDD;
 	padding: 2%;
 	background-color: white;
+	display: inline-block;
+	vertical-align:top;
+	
+}
+#hire_me
+{
+	width: 42.5%;
+	box-shadow: 0 0 10px 2.5px #DDD;
+	padding: 2%;
+	background-color: white;
+	display: inline-block;
+	vertical-align:top;
+	margin-left: 5%;
 	
 }
 #contact

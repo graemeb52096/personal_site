@@ -119,8 +119,9 @@ class Edit:
 
 class about:
     def GET(self):
-        bio = open('%s/bio/bio.txt'%(root), 'r')
-        return render.about(bio)
+        bio = open('%s/about/bio.txt'%(root), 'r')
+        hire_me = open('%s/about/hire_me.txt'%(root), 'r')
+        return render.about(bio, hire_me)
 class photography:
     def GET(self):
 
