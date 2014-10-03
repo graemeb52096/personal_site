@@ -206,7 +206,7 @@ line-height: 1.25em;
 #post_body
 {
 	height: 50%;
-	overflow: hidden;
+	overflow: auto;
 	font-size: 85%;
 }
 #post_links
