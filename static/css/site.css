@@ -191,6 +191,8 @@ ul
 	width: 100%;
 	display: inline;
 	padding:2.5%;
+	margin-right: auto;
+	margin-left: auto;
 	text-align: center;
 	position: absolute;
 	bottom: zero;
