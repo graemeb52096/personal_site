@@ -6,6 +6,8 @@ $def with (posts)
 		$for post in posts:
    			<div id = 'blog_post'>
 				<h2>$post.title</h2>
+				Link: <a id="post_link" href='$post.link'>$post.link_name</a>
+				</br>
 				<span id='date'>Date: $((post.posted_on).split(' ')[0])</span>
 				<div id='post_body'>
 					<p>
@@ -13,8 +15,8 @@ $def with (posts)
 					</p>
 				</div>
 				<div id='post_links'>
-       				<a id = 'post_link' href="/view/$post.id" id='read_more'>Read more</a> 
-       				<a id = 'post_link' href="/edit/$post.id">Edit</a>
+       				<a id = 'post_details' href="/view/$post.id" id='read_more'>Read more</a> 
+       				<a id = 'post_details' href="/edit/$post.id">Edit</a>
 				</div>	
 			</div>
 	</div>

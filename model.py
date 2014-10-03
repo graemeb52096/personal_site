@@ -11,8 +11,8 @@ def get_post(id):
     except IndexError:
         return None
 
-def new_post(title, text):
-    db.insert('entries', title=title, content=text, posted_on=datetime.datetime.utcnow())
+def new_post(title, text, link, link_name):
+    db.insert('entries', title=title, content=text, posted_on=datetime.datetime.utcnow(), link=link, link_name=link_name)
 
 def del_post(id):
     db.delete('entries', where="id=$id", vars=locals())

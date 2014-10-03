@@ -205,7 +205,7 @@ line-height: 1.25em;
 }
 #post_body
 {
-	height: 50%;
+	height: 45%;
 	overflow: auto;
 	font-size: 85%;
 }
@@ -217,9 +217,18 @@ line-height: 1.25em;
 #post_link
 {
 	color: #666666;
-	text-decoration: none;
+	text-decoration: underline;
 }
 #post_link:hover
+{
+	color: #B73045;
+}
+#post_details
+{
+	color: #666666;
+	text-decoration: none;
+}
+#post_details:hover
 {
 	color: #B73045;
 }

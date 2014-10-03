@@ -61,6 +61,10 @@ class New:
             description="Post title:"),
         web.form.Textarea('content', web.form.notnull, 
             description="Post content:"),
+        web.form.Textbox('link', web.form.notnull,
+            description="Link: "),
+        web.form.Textbox('link_name', web.form.notnull,
+            description="Link Name: "),
         web.form.Password('password', web.form.notnull,
             description="Super Secret Password:"),
         web.form.Button('Post entry'),
@@ -75,7 +79,7 @@ class New:
         if not form.validates():
             return render.new(form)
         if str(form.d.password) == '123':
-            model.new_post(form.d.title, form.d.content)
+            model.new_post(form.d.title, form.d.content, form.d.link, form.d.link_name)
             raise web.seeother('/')
         else:
             return render.new(form)
