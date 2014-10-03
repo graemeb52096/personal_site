@@ -1,0 +1,55 @@
+#header
+{
+	position: relative;
+	height: 5%;
+	padding-top: 5%;
+}
+#site_body
+{
+	text-align: center;
+}
+#posts
+{
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+#blog_post
+{
+	height: 40%;
+	width: 90%;
+	padding: 2.5%;
+	margin-top: 5%;
+	margin-right: auto;
+	margin-left: auto;
+}
+#about_me
+{
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+}
+.images
+{
+	width: 95%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+#photo
+{
+	width: 100%;
+	height: auto;
+}
+img
+{
+	width: 100%;
+}
+#post_link
+{
+	margin:0%;
+}
+h1
+{
+	font-size: 500%;
+}

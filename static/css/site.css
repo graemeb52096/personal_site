@@ -1,6 +1,11 @@
 @-viewport {  
     width: device-width;  
 }
+img
+{
+	width: 50%;
+	height: auto;
+}
 html
 {
 	margin:0;
