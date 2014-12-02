@@ -1,12 +1,12 @@
 $def with (posts)
 
-<div id='site_body'>
+<div class='row'>
 	<h1>Blog posts</h1>
-	<div id="posts">
+	<div>
 		$for post in posts:
-   			<div id = 'blog_post'>
+		<div class="col-sm-5">
 				<h2>$post.title</h2>
-				Link: <a id="post_link" href='$post.link'>$post.link_name</a>
+				Link: <a class="btn btn-info btn-xs" role="button" href='$post.link'>$post.link_name</a>
 				</br>
 				<span id='date'>Date: $((post.posted_on).split(' ')[0])</span>
 				<div id='post_body'>
@@ -15,9 +15,9 @@ $def with (posts)
 					</p>
 				</div>
 				<div id='post_links'>
-       				<a id = 'post_details' href="/view/$post.id" id='read_more'>Read more</a> 
+       				<a id = 'post_details' href="/view/$post.id" id='read_more'>Read more</a>
        				<a id = 'post_details' href="/edit/$post.id">Edit</a>
-				</div>	
+				</div>
 			</div>
 	</div>
 </div>

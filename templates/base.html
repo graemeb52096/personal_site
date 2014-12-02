@@ -1,19 +1,31 @@
 $def with (content)
-
+<!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="/static/css/site.css" type="text/css" media="screen" charset="utf-8"/>
+		<!--<link rel="stylesheet" href="/static/css/site.css" type="text/css" media="screen" charset="utf-8"/>
 		<link rel="stylesheet" href="/static/css/mobile.css" media="screen and (max-width: 600)"/>
 		<link rel="stylesheet" href="/static/css/mobile.css" media="screen and (max-device-width: 400)"/>
 		<meta name="p:domain_verify" content="08fcb32e3ef5a16564b4d897c0337867"/>
+	-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css"/>
 		<title>Graeme G. Bates</title>
 	</head>
 	<body>
-		<div id = 'header'>
-			<a id='mobile_header' href="/blog">BLOG</a>
-			<a id='mobile_header' href="/about">ABOUT</a>
-			<a id='mobile_header' href="/photography">PHOTOGRAPHY</a>
-			<a id='mobile_header' href="/resume">RÉSUMÉ</a>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class = 'container-fluid'>
+				<div>
+					<ul class = 'nav navbar-nav'>
+						<li><a class='navbar-brand' href="/blog">BLOG</a></li>
+						<li><a class='navbar-brand' href="/about">ABOUT</a></li>
+						<li><a class='navbar-brand' href="/photography">PHOTOGRAPHY</a></li>
+						<li><a class='navbar-brand' href="/resume">RÉSUMÉ</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class = 'container'>
+			$:content
 		</div>
-		$:content
 	</body>

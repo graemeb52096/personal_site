@@ -1,8 +1,10 @@
 $def with (form)
 
-<div id='site_body'>
+<div class='row'>
 	<h1>New Blog Post</h1>
-	<form action="" method="post">
-		$:form.render()
+	<form class='form' role='form' action="" method="post">
+		<div class = 'col-xs-7'>
+			$:form.render_css()
+		</div>
 	</form>
 </div>

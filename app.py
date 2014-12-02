@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import web, os, sys, json
 import model
+from web import form
 
 root = os.path.join(os.path.dirname(__file__)+"/")
 sys.path.insert(0, root)
@@ -35,8 +36,8 @@ render = web.template.render(templates, base='base', globals=t_globals)
 
 class index:
     def GET(self):
-        return render.index()    
-#blog classes    
+        return render.index()
+#blog classes
 class blog:
     def GET(self):
         posts = model.get_posts()
@@ -56,18 +57,37 @@ class View:
 
 class New:
 
-    form = web.form.Form(
-        web.form.Textbox('title', web.form.notnull, 
-            description="Post title:"),
-        web.form.Textarea('content', web.form.notnull, 
-            description="Post content:"),
-        web.form.Textbox('link', web.form.notnull,
-            description="Link: "),
-        web.form.Textbox('link_name', web.form.notnull,
-            description="Link Name: "),
-        web.form.Password('password', web.form.notnull,
-            description="Super Secret Password:"),
-        web.form.Button('Post entry'),
+    form = form.Form(
+        form.Textbox(
+            'title',
+            web.form.notnull,
+            description = 'Title: ',
+            class_ = 'form-control'
+        ),
+        form.Textarea(
+            'content', web.form.notnull,
+            description = 'Content: ',
+            class_ = 'form-control'
+        ),
+        form.Textbox(
+            'link', web.form.notnull,
+            description="Link Url: ",
+            class_ = 'form-control'
+        ),
+        form.Textbox(
+            'link_name', web.form.notnull,
+            description="Link Name: ",
+            class_ = 'form-control'
+        ),
+        form.Password(
+            'password', web.form.notnull,
+            description="Super Secret Password:",
+            class_ = 'form-control'
+        ),
+        form.Button(
+            'Post entry',
+            class_ = "btn btn-default"
+        ),
     )
 
     def GET(self):
@@ -93,7 +113,7 @@ class Delete:
             model.del_post(int(id))
             raise web.seeother('/')
         else:
-            return render.base('<br><br><br><br><br>Youre Evil')
+            return render.base('You\'re Evil')
 
 
 class Edit:
@@ -132,7 +152,7 @@ class photography:
         for f_n in total_con:
             if f_n.split('.')[1] == 'jpg':
                 files.append(f_n)
-        
+
         return render.photography(files)
 class resume:
     def GET(self):
