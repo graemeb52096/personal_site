@@ -1,7 +1,8 @@
 $def with(photos)
-<div class='row'>
-$for item in photos:
-		<div class = 'col-sm-6'>
-			<img class='img-responsive' src="/static/images/photos/$item">
-		</div>
+<div>
+	<ul class = 'row'>
+		$for item in photos:
+			<li class="col-lg-6 col-md-7 col-sm-8 col-xs-9">
+				<img class='img-responsive' src="/static/images/photos/$item">
+			</li>
 </div>
